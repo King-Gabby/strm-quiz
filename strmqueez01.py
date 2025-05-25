@@ -33,11 +33,11 @@ st.caption("Developed by Gabriel")
 
 if st.session_state.index >= len(quiz):
     st.balloons()
-    st.snow()
+    
     st.audio("https://www.soundjay.com/human/sounds/applause-8.mp3", autoplay=True)
-
     st.success(f"🎉 Quiz complete! Your score 🎈🎉✨: {st.session_state.score}/{len(quiz)}")
     if st.button("Restart"):
+        st.snow()
         st.image("https://media1.tenor.com/m/HY3hRtyv_CIAAAAC/congrats-proud-of-you.gif")  
         st.session_state.index = 0
         st.session_state.score = 0
